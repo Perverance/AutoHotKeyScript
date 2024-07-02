@@ -1,10 +1,5 @@
 #SingleInstance
 
-; NOTE
-; Sometimes the script turns off/on by itself, I don't know the reason yet.
-; I usually solve it by pressing the capslock key or turning off/on the script (Capslock+Esc)
-
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Initial setup
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
