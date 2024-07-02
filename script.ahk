@@ -42,7 +42,6 @@ CapsLock & F6:: Edit			; Capslock+F6 opens the script in the default text editor
 
 ; Capslock+F7 opens the location of the current script file
 ; I have a copy of mine in the following folder so it auto starts with my system
-
 ; CapsLock & F7:: Run "C:\Users\{your_username}\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
 ; Change {your_username} for your Windows user folder name and then uncomment the line
 
@@ -81,7 +80,12 @@ CapsLock & n:: Click "Right"
 ; TEXT EXPANSIONS
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; In my own script I have text expansion for common fields for forms, like full name, main e-mail address...
+; In my own script I have text expansions for common form fields, like full name, main email address...
+; Something like these:
+:*:;;ma::Marco
+:*:;;po::Polo
+:*:;;mc::Marco Polo
+
 ; This one inserts today's date
 :*:;;td:: {
   Send (FormatTime(, "ShortDate"))
@@ -92,8 +96,8 @@ CapsLock & n:: Click "Right"
 ; OTHERS
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-!Space::^+F14 ; Alt+Space for selection expand (editor.action.smartSelect.expand) in VS Code (I can't assign it otherwise)
-!Esc::Esc ; It cancels the weird Alt+Esc combination of Windows
+!Space::^+F14           ; Alt+Space for selection expand (editor.action.smartSelect.expand) in VS Code (I can't assign it otherwise)
+!Esc::Esc               ; It cancels the default Alt+Esc combination of Windows
 
 ; Opens Windows calculator (or focus it if already opened)
 #c:: {
@@ -104,19 +108,18 @@ CapsLock & n:: Click "Right"
 }
 
 
-#f1::Media_Play_Pause ; Win+F1 to play/pause multimedia
-#f2::Media_Next ; Win+F2 to play next multimedia (in my case, basically songs)
+#f1::Media_Play_Pause   ; Win+F1 to play/pause multimedia
+#f2::Media_Next         ; Win+F2 to play next multimedia
 
-; In my laptop, Fn+F3 and Fn+F4 controls brightness,
-; so I use the same analogy fow controlling volume, but with Win key instead of Fn
+; In my laptop, Fn+F3 and Fn+F4 controls brightness, so I use the same analogy fow controlling volume, but with Win key instead of Fn
 #f3::Volume_Down
 #f4::Volume_Up
 
 
 ; Navigation in Windows explorer
 #HotIf WinActive("ahk_exe explorer.exe")
-CapsLock & 2::!Up     ; Alt+Up for going to parent folder
-CapsLock & g::!Enter  ; Alt+Enter for opening properties panel
+CapsLock & 2::!Up       ; Alt+Up for going to parent folder
+CapsLock & g::!Enter    ; Alt+Enter for opening properties panel
 
 ; Go to parent folder with '\' key (below the Enter key in my US keyboard)
 \:: {
@@ -126,13 +129,12 @@ CapsLock & g::!Enter  ; Alt+Enter for opening properties panel
 
 ; Navigation in Firefox
 #HotIf WinActive("ahk_exe firefox.exe")
-CapsLock & 2::!Left   ; Alt+Left for going backwards one page
+CapsLock & 2::!Left     ; Alt+Left for going backwards one page
 #HotIf
 
 
 ; Do you happen to have a lot of PDF files that you want open to see what are about and close them quickly?
 ; I use it like this: Capslock+F in the explorer to open a PDF, Capslock+H to close it and go back to the explorer
-
 CapsLock & h:: {
   ; If the current window is a PDF opened in Firefox, pressing Capslock+H sends Ctrl+W and Alt+Tab
   if WinActive(".pdf — Mozilla Firefox") {
@@ -144,11 +146,11 @@ CapsLock & h:: {
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; CONTROLS FOR FIREFOX PIP WINDOW
-; These ones work if a PIP (picture-in-picture) window of Firefox is opened
+; These ones work if a PIP (picture-in-picture) window of Firefox is already opened
 ; Really useful for studying or transcribing, since you can quickly control the PIP content with the keyboard
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-msg := "Win+J:`tbackwards 10s`nWin+K:`tplay/pause`nWin+H:`tclose PIP", "No se encontró PIP de Firefox`n"
+msg := "Win+J:`tbackwards 10s`nWin+K:`tplay/pause`nWin+H:`tclose PIP"
 
 ; Win+K pauses/plays the current PIP window
 #K:: {
@@ -193,7 +195,7 @@ msg := "Win+J:`tbackwards 10s`nWin+K:`tplay/pause`nWin+H:`tclose PIP", "No se en
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; NUMSLOCK INDICATOR
-; A simple tooltip that shows the state of the numslock key
+; A simple tooltip that shows the state of the Num Lock key
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ~*NumLock:: {
