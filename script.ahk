@@ -84,7 +84,7 @@ CapsLock & n:: Click "Right"
 ; Something like these:
 :*:;;ma::Marco
 :*:;;po::Polo
-:*:;;mc::Marco Polo
+:*:;;mp::Marco Polo
 
 ; This one inserts today's date
 :*:;;td:: {
