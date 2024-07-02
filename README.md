@@ -9,4 +9,4 @@ I can't go back to the way I used computers before. In fact, I find it strange t
 
 - I use a laptop with a US keyboard and a custom MSKLC soft keyboard, so some parts of the script might not make sense for you. Adapt it to your needs.
 - I know very little about AutoHotkey, so many things could be improved. If you see something that could be fixed or changed, please tell me!
-- Sometimes the script turns off/on by itself; I don't know the reason yet. I usually solve it by pressing the Caps Lock key or turning the script off/on (Caps Lock + Esc).
+- Sometimes the script turns off/on by itself; I don't know the reason yet. I usually solve it by pressing the Caps Lock key again or turning the script off/on (Capslock + Esc).
