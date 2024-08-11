@@ -5,7 +5,6 @@ The heart of the script is navigation with the left hand, allowing you to do muc
 
 I find it strange to use a PC without this script.
 
----
 
 **How to use it:**
 - Download and install AutoHotkey (V2 or higher): https://www.autohotkey.com
@@ -13,7 +12,6 @@ I find it strange to use a PC without this script.
 - Open `shell:startup` folder (you can do it from `Win+R` to open Run window, or by typing it in the address bar of a explorer window), and place there the `script.ahk` file you downloaded from this repository. You can place it anywhere else, but in this location the script will run automatically when you start your system.
 - Double click the `script.ahk` file to run the script. Done!
 
----
 
 **Notes:**
 - I use a laptop with a US keyboard and a custom MSKLC soft keyboard, so some parts of the script might not make sense for you. Adapt it to your needs.
