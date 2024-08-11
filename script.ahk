@@ -41,9 +41,9 @@ CapsLock & F5:: Reload		; Capslock+F5 reloads the script
 CapsLock & F6:: Edit			; Capslock+F6 opens the script in the default text editor configured by AutoHotkey
 
 ; Capslock+F7 opens the location of the current script file
-; I have a copy of mine in the following folder so it auto starts with my system
-; CapsLock & F7:: Run "C:\Users\{your_username}\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
-; Change {your_username} for your Windows user folder name and then uncomment the line
+; I have a copy of mine in the following folder so it auto starts with my system. Change {your_username} to your Windows user folder.
+CapsLock & F7:: Run "C:\Users\{your_username}\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; CAPSLOCK KEY RELATED FUNCTIONALITY
@@ -61,7 +61,7 @@ CapsLock & e::End              ; 'End' (useful for going to the end of a line or
 CapsLock & `::^Home            ; 'Ctrl+Home' (useful for going to the start of a page/document)
 CapsLock & 4::^End             ; 'Ctrl+End' (useful for going to the end of a page/document)
 CapsLock & 1::^PgUp            ; 'Ctrl+PgUp' (useful for changing tabs in many programs)
-CapsLock & 3::^PgDn            ; 'Ctrl+PgDown' (useful for changing tabs in many programs)
+CapsLock & 3::^PgDn            ; 'Ctrl+PgDown' (same as above)
 CapsLock & z::PgUp             ; 'PgUp'
 CapsLock & c::PgDn             ; 'PgDn'
 
@@ -147,7 +147,7 @@ CapsLock & h:: {
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; CONTROLS FOR FIREFOX PIP WINDOW
 ; These ones work if a PIP (picture-in-picture) window of Firefox is already opened
-; Really useful for studying or transcribing, since you can quickly control the PIP content with the keyboard
+; Useful for studying or transcribing, as it allows you to quickly control the PIP content with the keyboard without losing focus on the window
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 msg := "Win+J:`tbackwards 10s`nWin+K:`tplay/pause`nWin+H:`tclose PIP"
@@ -212,8 +212,7 @@ msg := "Win+J:`tbackwards 10s`nWin+K:`tplay/pause`nWin+H:`tclose PIP"
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; RESTORE GROUP OF WINDOWS
-; When I do webdev, I like to have VS Code and Firefox side by side in 3/4 ratio
-; Win+` quickly restores both windows, so you can be anywhere and quickly return to your workspace!
+; Sometimes I work with VS Code and Firefox side by side; Win+` quickly restores both, so you can be anywhere and quickly return to your workspace!
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 #`::
