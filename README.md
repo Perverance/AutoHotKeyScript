@@ -1,4 +1,4 @@
-This is a simple `AutoHotkey V2` script that I made, which _has changed the way I use computers_.
+This is a simple AutoHotkey V2 script that I made, which _has changed the way I use computers_.
 It's not a superficial statement.
 
 The heart of the script is navigation with the left hand, allowing you to do much more without moving your hands away from the keyboard. This is done by remapping the Caps Lock key to function as a _modifier_.
